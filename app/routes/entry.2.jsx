@@ -12,20 +12,22 @@ export default function Entry2() {
   };
 
   return (
-    <div className="App">
-      <h1>ごく簡単なメモアプリ</h1>
-      <input
-        type="text"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        placeholder="メモを入力してください"
-      />
-      <button onClick={addMemo}>追加</button>
-      <ul>
-        {memos.map((note, index) => (
-          <li key={index}>{note}</li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <div className="App">
+        <h1>ごく簡単なメモアプリ</h1>
+        <input
+          type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="メモを入力してください"
+        />
+        <button onClick={addMemo}>追加</button>
+        <ul>
+          {memos.map((note, index) => (
+            <li key={index}>{note}</li>
+          ))}
+        </ul>
+      </div>
+    </>
   );
 }
